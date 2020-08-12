@@ -1,4 +1,4 @@
-This is Arpan Saha's first github project !
+This is my first github project !
   
   It contains all the necessary details that needs to be learn by a git and github newbie , including commands explained in details 
   and other files.
