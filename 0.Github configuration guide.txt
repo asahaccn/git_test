@@ -1,0 +1,82 @@
+Git and Github are different git is version control that is used to upload your code to github which is graphical user interface for your code.
+
+
+1. Install git 
+   sudo apt update
+   sudo apt upgrade
+   sudo install curl git
+  
+   git --version
+
+2. add username and password
+
+  git config --global user.name "username"
+  git config --global user.email "emailid"
+
+  to check user username and email
+
+  git config --get user.name
+  git config --get user.email
+
+  set color : git config --global color.ui auto
+
+3. Go to Github.com and create a new account
+
+4. An SSH key is a cryptographically secure identifier. It’s like a really long  password used to identify your machine. GitHub uses SSH keys to allow you to upload 
+   to your repository without having to type in your username and password every time.
+
+  First, we need to see if you have an SSH key already installed. Type this into the terminal:
+
+  ls ~/.ssh/id_rsa.pub
+If the message in the console contains No such file or directory, then you don’t have an SSH key, and you’ll need to create one. If you do not see No such file
+ or directory in the output, you already have a key; proceed to step 6.
+
+5. To create a new SSH key, run the following command inside your terminal. The -C flag followed by your email address ensures that GitHub knows who you are.
+
+   ssh-keygen -C "your email"
+
+  
+    When it prompts you for a location to save the generated key, just push Enter.
+    Next, it will ask you for a password; enter one if you wish, but it’s not required.
+
+6. go to github setting , click on add ssh and gpa key and click on the green button and create a new ssh , give the name something descriptive minimize it.
+
+   Now you need to copy your public SSH key. To do this, we’re going to use a command called cat to read the file to the console. 
+  (Note that the .pub file extension is important in this case.)
+
+  ls ~/.ssh/id_rsa.pub
+
+  Highlight and copy the output, which starts with ssh-rsa and ends with your email address.
+
+  Now, go back to GitHub in your browser window and paste the key you copied into the key field. Then, click Add SSH key. You’re done! You’ve successfully
+ added your SSH key!
+
+7. Testing your key
+
+   Follow the directions to verify your SSH connection
+
+   
+
+Open Terminal.
+
+Enter the following:
+
+$ ssh -T git@github.com
+# Attempts to ssh to GitHub
+
+You may see a warning like this:
+
+> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+> RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+> Are you sure you want to continue connecting (yes/no)?
+
+or like this:
+
+> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+> RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+> Are you sure you want to continue connecting (yes/no)?
+
+Verify that the fingerprint in the message you see matches one of the messages in step 2, then type yes:
+
+> Hi username! You've successfully authenticated, but GitHub does not
+> provide shell access.

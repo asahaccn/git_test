@@ -1,0 +1,50 @@
+
+                                Github Cheat sheet
+
+   1. Your Own Repository
+      git clone repository url
+     //git init to initialize a repository with .git //not needed just to understand
+     //gitignore // to add files that we want to be private (for example: in .gitignore file we can add
+     .project and  .*cpp) //so it will ignore project directory  and .cpp files
+     ls - la to see .directory and rm -rf to remove . directory
+     git add filename //to add a single file
+     git add . or git add -A //to add all the files
+     git commit -m"enter your message" //to commit the files in local repository
+     git push //to push the files in remote repository i.e Github
+     git status //to see the status of your local repository
+     git log //to see commit message, time and date
+     git diff //to see the changes made to a file compared to previous
+     git reset//to rollback the changes in staging area i.e after we have git add
+
+
+
+   2. Open source repository
+      fork the repository in your profile
+      git clone repository url
+      //always remember to work with a new branch
+      /*to always make sure that the forked repository we are working with is up-to-date
+      git remote - v
+      git remote add upstream url of original source repository from were repository was forked
+      //we will see the push and fetch link of original repository.
+    */
+      git branch -a //to check if there is branch other tan master
+      git branch test //to create a new branch
+      git checkout test//to enter into the branch
+      git checkout -b test //short command to create a checkout branch
+      /*now add files and commit files in test branch then check master branch and pull the master
+       branch again to check that everything is up-to-date
+      git checkout master
+      git pull*/
+      git checkout test//to enter into test branch agin
+      git merge master //to merge created branch with master
+      git branch --merged //to check branches merged
+      git branch -d test //to delete the branch in your local repository
+      git push origin --delete test //to delete the branch in remote repository i.e github
+      git pull upstream master//to check that the master branch of the original forked repository
+                              //and my repository is up-to-date
+      git push//finally commit to remote repository
+
+      /*Then go to our branch generate a pull merge request . If your branch is merged with the master
+      branch of the open source repository then you can delete your new branch test.
+      Next time when you want to push something.You have the original branch pulled to your local
+      repository yo can do git pull origin master or git push origin master. */

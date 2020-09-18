@@ -1,5 +1,5 @@
--------------- GIT BASIC COMMANDS PART - 1--------
-               More Detailed 
+	                        -------------- Understanding Github in details--------
+                                                       More Detailed 
 
 
 1. Go to our github profile on web and create a new repository  name it git_test2 and a description(optional) and click save.
@@ -73,7 +73,7 @@
 
   5.   To initialize repository from existing code 
      git init 
-     we will see the .git directory at the end of the url
+     we will see the .git directory at the end of the url //.git is used to coummunicate with github and your machine.
      now , what is this .git directory it is basically contyains all the details about your repository 
      here, git_test2 , it helps to track the repository
 
@@ -340,6 +340,9 @@
    git push origin --delete test-multiply
 
   git branch -a , it only shows master branch both locally and remotely.
+
+
+  
 
 
       -----------------Thank You ------------------
